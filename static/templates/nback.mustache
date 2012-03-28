@@ -1,0 +1,23 @@
+<div class="scoring">
+  <p> Correct: {{scoreRight}} </p>
+  <p> Incorrect: {{scoreWrong}} </p>
+  {{#over}} GAME IS OVER {{/over}}
+</div>
+{{#hasPosition}}
+  <ol class="blocks">
+    {{#blocks}}
+      <li style="background-color: {{color}}"></li>
+    {{/blocks}}
+  </ol>
+{{/hasPosition}}
+{{^hasPosition}}
+<div class="singleBlock" style="background-color: {{color}}"></div>
+{{/hasPosition}}
+<div class="guesses">
+  {{#hasPosition}}
+    <button class="position">Position Match</button>
+  {{/hasPosition}}
+  {{#hasColor}}
+    <button class="color">Color Match</button>
+  {{/hasColor}}
+</div>
