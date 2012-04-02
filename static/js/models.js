@@ -209,7 +209,7 @@ $(function () {
 		    foreign: this.get("opponentCrossScore")
 		}
 	    };
-	}
+	},
 
 	start: function () {
 	    this.get("localBattle").start();
